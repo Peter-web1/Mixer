@@ -1,0 +1,278 @@
+
+<!DOCTYPE html> 
+<html>
+<head>
+	<title>CSS селекторы и не только.</title>
+	<meta charset="utf-8" />
+	<style>
+		body > div{
+			/*width: 18%;*/
+			/*min-width: 3in;*/
+			/*min-width: 4in;*/
+			/*margin: 2%;*/
+			/*border: 3px solid #ccdfff;*/
+			/*border-radius: 25px;*/
+			/*box-shadow: 3px 3px 6px #ccc;*/
+			/*padding: 1vw;*/
+			/*text-align: center;*/
+			/*font-family: arial;*/
+			
+		}
+		article {
+			width: 18%;
+			min-width: 3in;
+			max-width: 4in;
+			margin: 2%;
+			border: 3px solid #ccdfff;
+			border-radius: 25px;
+			box-shadow: 3px 3px 6px #ccc;
+			padding: 1vw;
+			text-align: center;
+			font-family: arial;
+			float: left;
+			
+		}
+		/*.my{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		 	flex-wrap: wrap;
+		}*/
+		div > img[src*="big.jpg"] {
+			margin-left: auto;
+			margin-right: auto;
+			width: 90%;
+			display: block; /*переходит в блочный элемент*/
+		}		
+		div > img:not([src*="big.jpg"]) {
+			width: 20%;
+			border: 1px solid #ddd;
+			padding: 1%;
+			border-radius: 10px;
+		}
+		div > h1{
+			text-transform: uppercase;
+			font-style: 12pt;
+			font-weight: 600;
+			text-align: center;
+		}
+		h1 + div {
+			text-align: justify; /*Обосновать не по центру*/
+			font-style: italic;
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		div > span{
+			background-color: #f0f0f0;
+			border-radius: 5px;
+			padding: 5px;
+			margin: 1vw;
+			font-weight: 700;
+			vertical-align: middle;
+		}
+		div > span:nth-child(1) {
+			text-decoration: line-through;
+			color: red;
+		}
+		div > span:nth-child(2) {
+			background-color: #ffe79e;
+			font-size: 1.5em;
+		}
+		span > span {
+			color: black;
+		}
+		div>div+div {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		button{
+			background-color: #55aa55;
+			width: 90%;
+			height: 45px;
+			margin-top: 15px;
+			font-style: 20pt;
+			color: white;
+			border: 2px solid #44bb44;
+			border-radius: 10px;
+		}
+		button:active {
+			background-color: #338833;
+		}
+
+	</style>
+</head>
+<body>
+	<article>	
+		<div>
+			<img src="http://files.courses.dp.ua/web/04/pic_big.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_1.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_2.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_3.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_4.jpg">
+			<h1>Кухонный комбайн KX567-T</h1>
+			<div>Этот кухонный комбайн KX567-T оснащен мощным мотором с 2 скоростями и импульсным режимом, что обеспечивает мощность и точное управление для приготовления любых блюд.</div>
+			<div>
+				<span><span>10000 грн</span></span>
+				<span>9999 грн.</span>
+			</div>
+			<button>Купить сейчас!</button>
+		</div>
+	</article>
+
+	<article>	
+		<div>
+			<img src="http://files.courses.dp.ua/web/04/pic_big.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_1.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_2.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_3.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_4.jpg">
+			<h1>Кухонный комбайн KX567-T</h1>
+			<div>Этот кухонный комбайн KX567-T оснащен мощным мотором с 2 скоростями и импульсным режимом, что обеспечивает мощность и точное управление для приготовления любых блюд.</div>
+			<div>
+				<span><span>10000 грн</span></span>
+				<span>9999 грн.</span>
+			</div>
+			<button>Купить сейчас!</button>
+		</div>
+	</article>
+
+	<article>	
+		<div>
+			<img src="http://files.courses.dp.ua/web/04/pic_big.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_1.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_2.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_3.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_4.jpg">
+			<h1>Кухонный комбайн KX567-T</h1>
+			<div>Этот кухонный комбайн KX567-T оснащен мощным мотором с 2 скоростями и импульсным режимом, что обеспечивает мощность и точное управление для приготовления любых блюд.</div>
+			<div>
+				<span><span>10000 грн</span></span>
+				<span>9999 грн.</span>
+			</div>
+			<button>Купить сейчас!</button>
+		</div>
+	</article>
+
+	<article>	
+		<div>
+			<img src="http://files.courses.dp.ua/web/04/pic_big.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_1.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_2.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_3.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_4.jpg">
+			<h1>Кухонный комбайн KX567-T</h1>
+			<div>Этот кухонный комбайн KX567-T оснащен мощным мотором с 2 скоростями и импульсным режимом, что обеспечивает мощность и точное управление для приготовления любых блюд.</div>
+			<div>
+				<span><span>10000 грн</span></span>
+				<span>9999 грн.</span>
+			</div>
+			<button>Купить сейчас!</button>
+		</div>
+	</article>
+
+	<article>	
+		<div>
+			<img src="http://files.courses.dp.ua/web/04/pic_big.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_1.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_2.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_3.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_4.jpg">
+			<h1>Кухонный комбайн KX567-T</h1>
+			<div>Этот кухонный комбайн KX567-T оснащен мощным мотором с 2 скоростями и импульсным режимом, что обеспечивает мощность и точное управление для приготовления любых блюд.</div>
+			<div>
+				<span><span>10000 грн</span></span>
+				<span>9999 грн.</span>
+			</div>
+			<button>Купить сейчас!</button>
+		</div>
+	</article>
+
+	<article>	
+		<div>
+			<img src="http://files.courses.dp.ua/web/04/pic_big.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_1.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_2.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_3.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_4.jpg">
+			<h1>Кухонный комбайн KX567-T</h1>
+			<div>Этот кухонный комбайн KX567-T оснащен мощным мотором с 2 скоростями и импульсным режимом, что обеспечивает мощность и точное управление для приготовления любых блюд.</div>
+			<div>
+				<span><span>10000 грн</span></span>
+				<span>9999 грн.</span>
+			</div>
+			<button>Купить сейчас!</button>
+		</div>
+	</article>
+
+	<article>	
+		<div>
+			<img src="http://files.courses.dp.ua/web/04/pic_big.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_1.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_2.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_3.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_4.jpg">
+			<h1>Кухонный комбайн KX567-T</h1>
+			<div>Этот кухонный комбайн KX567-T оснащен мощным мотором с 2 скоростями и импульсным режимом, что обеспечивает мощность и точное управление для приготовления любых блюд.</div>
+			<div>
+				<span><span>10000 грн</span></span>
+				<span>9999 грн.</span>
+			</div>
+			<button>Купить сейчас!</button>
+		</div>
+	</article>
+
+	<article>	
+		<div>
+			<img src="http://files.courses.dp.ua/web/04/pic_big.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_1.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_2.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_3.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_4.jpg">
+			<h1>Кухонный комбайн KX567-T</h1>
+			<div>Этот кухонный комбайн KX567-T оснащен мощным мотором с 2 скоростями и импульсным режимом, что обеспечивает мощность и точное управление для приготовления любых блюд.</div>
+			<div>
+				<span><span>10000 грн</span></span>
+				<span>9999 грн.</span>
+			</div>
+			<button>Купить сейчас!</button>
+		</div>
+	</article>
+
+	<article>	
+		<div>
+			<img src="http://files.courses.dp.ua/web/04/pic_big.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_1.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_2.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_3.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_4.jpg">
+			<h1>Кухонный комбайн KX567-T</h1>
+			<div>Этот кухонный комбайн KX567-T оснащен мощным мотором с 2 скоростями и импульсным режимом, что обеспечивает мощность и точное управление для приготовления любых блюд.</div>
+			<div>
+				<span><span>10000 грн</span></span>
+				<span>9999 грн.</span>
+			</div>
+			<button>Купить сейчас!</button>
+		</div>
+	</article>
+
+	<article>	
+		<div>
+			<img src="http://files.courses.dp.ua/web/04/pic_big.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_1.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_2.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_3.jpg">
+			<img src="http://files.courses.dp.ua/web/04/pic_4.jpg">
+			<h1>Кухонный комбайн KX567-T</h1>
+			<div>Этот кухонный комбайн KX567-T оснащен мощным мотором с 2 скоростями и импульсным режимом, что обеспечивает мощность и точное управление для приготовления любых блюд.</div>
+			<div>
+				<span><span>10000 грн</span></span>
+				<span>9999 грн.</span>
+			</div>
+			<button>Купить сейчас!</button>
+		</div>
+	</article>
+		
+	
+</body>
+</html>
